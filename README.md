@@ -3,7 +3,7 @@
 A sample application to learn and play around with a C++ implementation of the abstract factory pattern.
 
 TODO:
-* Automated travis build
+* All the automation via travis: c++ style checker, build, unit tests, system test
 * What problem does abstract factory solve
 * What aspects are explored here?
   * C++ factory.make() return type and ownership (smart pointers)
