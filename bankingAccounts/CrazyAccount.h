@@ -1,7 +1,3 @@
-//
-// Created by Christian Gesell on 12.04.17.
-//
-
 #ifndef CRAZYACCOUNT_H
 #define CRAZYACCOUNT_H
 

@@ -1,7 +1,3 @@
-//
-// Created by Christian Gesell on 11.04.17.
-//
-
 #ifndef ACCOUNTFACTORY_H
 #define ACCOUNTFACTORY_H
 

@@ -1,7 +1,3 @@
-//
-// Created by Christian Gesell on 12.04.17.
-//
-
 #ifndef WELLNESSACCOUNT_H
 #define WELLNESSACCOUNT_H
 

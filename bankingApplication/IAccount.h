@@ -1,7 +1,3 @@
-//
-// Created by Christian Gesell on 11.04.17.
-//
-
 #ifndef IACCOUNT_H
 #define IACCOUNT_H
 
