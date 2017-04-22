@@ -6,7 +6,8 @@
 #define BANKAPPLICATION_H
 
 #include "IAccountFactory.h"
-#include <list>
+#include "IAccount.h"
+#include <vector>
 
 class BankApplication {
 public:
@@ -16,7 +17,7 @@ public:
 
 private:
     IAccountFactory* accountFactory;
-    std::list<IAccount*> accounts;
+    std::vector<std::shared_ptr<IAccount>> accounts;
 };
 
 #endif //BANKAPPLICATION_H

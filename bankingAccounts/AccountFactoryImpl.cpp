@@ -9,13 +9,10 @@
 #include "CrazyAccount.h"
 #include "WellnessAccount.h"
 
-IAccount* AccountFactoryImpl::make(std::string accountType) {
-    return makeMap[accountType]();
+std::shared_ptr<IAccount> AccountFactoryImpl::sharedMake(std::string accountType) {
+    std::shared_ptr<IAccount> ptr(makeMap[accountType]());
+    return ptr;
 }
-
-//std::shared_ptr<IAccount> AccountFactoryImpl::sharedMake(std::string accountType) {
-//    return std::make_shared<IAccount>(makeMap[accountType]());
-//}
 
 std::vector<std::string> AccountFactoryImpl::getAccountNames() {
     std::vector<std::string> keys;

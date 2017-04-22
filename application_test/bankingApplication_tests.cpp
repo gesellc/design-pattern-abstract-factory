@@ -16,20 +16,19 @@ public:
 
 class MockAccountFactoryImpl : public IAccountFactory {
 public:
-    std::list<MockAccount*> accounts;
+    std::vector<std::shared_ptr<MockAccount>> sharedAccounts;
 
-    IAccount *make(std::string accoutType) override {
+    std::shared_ptr<IAccount> sharedMake(std::string accountType) override {
         MockAccount * newAccount = new MockAccount();
-        accounts.push_front(newAccount);
-        return newAccount;
+        std::shared_ptr<MockAccount> ptr(newAccount);
+        sharedAccounts.push_back(ptr);
+        return ptr;
     }
 
     vector<string> getAccountNames() override {
         vector<string> nullObject;
         return nullObject;
     }
-//private:
-//    std::vector<std::string> accountNames = {"CrazyAccount", "WellnessAccount"};
 };
 
 
@@ -40,7 +39,7 @@ TEST(bankingApplicationTest, advertisesTwoAccounts) {
 
     bankApp.run();
 
-    std::list<MockAccount*>::iterator accountIterator = mockAccountFactory->accounts.begin();
+    auto accountIterator = mockAccountFactory->sharedAccounts.begin();
     ASSERT_TRUE((*accountIterator)->advertiseWasCalled);
     ++accountIterator;
     ASSERT_TRUE((*accountIterator)->advertiseWasCalled);

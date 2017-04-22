@@ -16,9 +16,7 @@ class AccountFactoryImpl : public IAccountFactory {
 public:
     AccountFactoryImpl();
 
-    IAccount * make(std::string accountType) override;
-
-//    std::shared_ptr<IAccount> sharedMake(std::string accountType);
+    std::shared_ptr<IAccount> sharedMake(std::string accountType) override;
 
     std::vector<std::string> getAccountNames() override;
 

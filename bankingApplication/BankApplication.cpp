@@ -4,7 +4,6 @@
 
 #include "BankApplication.h"
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -15,11 +14,11 @@ void BankApplication::run() {
     cout << "Welcome to our Bank!" << endl;
     cout << endl;
 
-    accounts.push_front(accountFactory->make("WellnessAccount"));
-    accounts.push_front(accountFactory->make("CrazyAccount"));
+    accounts.push_back(accountFactory->sharedMake("WellnessAccount"));
+    accounts.push_back(accountFactory->sharedMake("CrazyAccount"));
 
     cout << "Active accounts:" << endl;
-    for (IAccount * account : accounts) {
+    for (auto account : accounts) {
         cout << "- " << account->advertise() << endl;
     }
     cout << endl;
