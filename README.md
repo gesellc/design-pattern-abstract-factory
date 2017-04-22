@@ -8,3 +8,8 @@ TODO:
 * What aspects are explored here?
   * C++ factory.make() return type and ownership (smart pointers)
   * Tradeoff: Type safety vs. independent deployablilits (see Uncle Bob)
+* Highlight use case: New requirements come in... now we only have to change the plugin side
+
+# Contributions
+
+Yes! Help me make this sample application more ideomatic modern C++, more robuts, easier to read... just create a pull request.
