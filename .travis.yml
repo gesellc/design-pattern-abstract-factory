@@ -1,0 +1,10 @@
+language: cpp
+sudo: required
+dist: trusty
+compiler:
+- clang
+os:
+- linux
+script:
+- cmake --build ./cmake-build-debug --target run_bankingApplication_tests
+- ./cmake-build-debug/application_test/run_bankingApplication_tests
