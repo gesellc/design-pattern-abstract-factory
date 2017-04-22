@@ -9,6 +9,8 @@ before_script:
   - mkdir cmake-build
   - cd cmake-build
   - cmake ..
+  - pwd
 script:
-  - cmake --build ./cmake-build --target run_bankingApplication_tests
-  - ./cmake-build/application_test/run_bankingApplication_tests
+  - pwd
+  - cmake --build . --target run_bankingApplication_tests
+  - ./application_test/run_bankingApplication_tests
