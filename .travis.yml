@@ -106,13 +106,9 @@ install:
 
 
 script:
-  - ls -la
-  - pwd
-  - cd ..
-  - pwd
+  - cd $TRAVIS_BUILD_DIR
   - mkdir cmake-build
   - cd cmake-build
   - cmake ..
-  - pwd
   - cmake --build . --target run_bankingApplication_tests
   - ./application_test/run_bankingApplication_tests
