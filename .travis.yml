@@ -106,6 +106,9 @@ install:
 
 
 script:
+  - pwd
+  - cd ..
+  - pwd
   - mkdir cmake-build
   - cd cmake-build
   - cmake ..
