@@ -1,18 +1,22 @@
 dist: trusty
 sudo: required
 language: cpp
-compiler: gcc
+compiler:
+#  - gcc
+  - clang
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+      #- ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.6
     packages:
-      - gcc-6
-      - g++-6
+      #- gcc-6
+      #- g++-6
+      - clang-3.6
       - cmake
 script:
-  - sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
-  - sudo ln -s /usr/bin/g++-6 /usr/local/bin/g++
+#  - sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
+#  - sudo ln -s /usr/bin/g++-6 /usr/local/bin/g++
   - gcc -v && g++ -v && cmake --version
   - mkdir cmake-build
   - cd cmake-build
