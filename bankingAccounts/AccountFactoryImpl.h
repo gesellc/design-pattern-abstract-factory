@@ -17,7 +17,7 @@ public:
     std::vector<std::string> getAccountNames() override;
 
 private:
-    std::unordered_map<std::string, std::function<IAccount *()>> makeMap;
+    std::unordered_map<std::string, std::function<std::shared_ptr<IAccount>()>> makeMap;
 };
 
 #endif //ACCOUNTFACTORYIMPL_H

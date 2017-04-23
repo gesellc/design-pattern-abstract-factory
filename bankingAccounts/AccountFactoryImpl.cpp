@@ -6,8 +6,7 @@
 #include "WellnessAccount.h"
 
 std::shared_ptr<IAccount> AccountFactoryImpl::make(std::string accountType) {
-    std::shared_ptr<IAccount> ptr(makeMap[accountType]());
-    return ptr;
+    return makeMap[accountType]();
 }
 
 std::vector<std::string> AccountFactoryImpl::getAccountNames() {
@@ -19,8 +18,8 @@ std::vector<std::string> AccountFactoryImpl::getAccountNames() {
 
 AccountFactoryImpl::AccountFactoryImpl() {
     makeMap = {
-            {"CrazyAccount", [](){ return new CrazyAccount(); }},
-            {"WellnessAccount", [](){ return new WellnessAccount(); }},
-            {"WellnessAccountPlus", [](){ return new WellnessAccount(); }}
+            {"CrazyAccount", [](){ return std::make_shared<CrazyAccount>(); }},
+            {"WellnessAccount", [](){ return std::make_shared<WellnessAccount>(); }},
+            {"WellnessAccountPlus", [](){ return std::make_shared<WellnessAccount>(); }}
     };
 }
