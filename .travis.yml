@@ -1,22 +1,22 @@
-sudo: required
 dist: trusty
+sudo: required
 language: cpp
-compiler: g++
-install: export CXX="g++-5"
+compiler: gcc
 addons:
   apt:
     sources:
-    - ubuntu-toolchain-r-test
+      - ubuntu-toolchain-r-test
     packages:
-    - g++-5
-os:
-  - linux
-before_script:
+      - gcc-6
+      - g++-6
+      - cmake
+script:
+  - sudo ln -s /usr/bin/gcc-6 /usr/local/bin/gcc
+  - sudo ln -s /usr/bin/g++-6 /usr/local/bin/g++
+  - gcc -v && g++ -v && cmake --version
   - mkdir cmake-build
   - cd cmake-build
   - cmake ..
-  - pwd
-script:
   - pwd
   - cmake --build . --target run_bankingApplication_tests
   - ./application_test/run_bankingApplication_tests
