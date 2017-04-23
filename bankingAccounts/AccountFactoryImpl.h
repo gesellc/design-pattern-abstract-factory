@@ -1,9 +1,11 @@
-#ifndef ACCOUNTFACTORYIMPL_H
-#define ACCOUNTFACTORYIMPL_H
+#ifndef BANKINGACCOUNTS_ACCOUNTFACTORYIMPL_H_
+#define BANKINGACCOUNTS_ACCOUNTFACTORYIMPL_H_
 
 #include <functional>
 #include <unordered_map>
 #include <vector>
+#include <memory>
+#include <string>
 #include "IAccount.h"
 #include "IAccountFactory.h"
 
@@ -20,4 +22,4 @@ class AccountFactoryImpl : public IAccountFactory {
       makeMap;
 };
 
-#endif  // ACCOUNTFACTORYIMPL_H
+#endif  // BANKINGACCOUNTS_ACCOUNTFACTORYIMPL_H_

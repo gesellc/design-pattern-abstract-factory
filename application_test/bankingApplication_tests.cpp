@@ -1,8 +1,11 @@
+#include <memory>
+#include <string>
+#include <vector>
+#include "BankApplication.h"
 #include "gtest/gtest.h"
 
-#include "BankApplication.h"
-
-using namespace std;
+using std::vector;
+using std::string;
 
 class MockAccount : public IAccount {
  public:

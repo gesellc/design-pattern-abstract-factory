@@ -1,13 +1,14 @@
-#ifndef BANKAPPLICATION_H
-#define BANKAPPLICATION_H
+#ifndef BANKINGAPPLICATION_BANKAPPLICATION_H_
+#define BANKINGAPPLICATION_BANKAPPLICATION_H_
 
 #include <vector>
+#include <memory>
 #include "IAccount.h"
 #include "IAccountFactory.h"
 
 class BankApplication {
  public:
-  BankApplication(IAccountFactory* accountFactory);
+    explicit BankApplication(IAccountFactory* accountFactory);
 
   void run();
 
@@ -16,4 +17,4 @@ class BankApplication {
   std::vector<std::shared_ptr<IAccount>> accounts;
 };
 
-#endif  // BANKAPPLICATION_H
+#endif  // BANKINGAPPLICATION_BANKAPPLICATION_H_

@@ -1,7 +1,9 @@
-#ifndef ACCOUNTFACTORY_H
-#define ACCOUNTFACTORY_H
+#ifndef BANKINGAPPLICATION_IACCOUNTFACTORY_H_
+#define BANKINGAPPLICATION_IACCOUNTFACTORY_H_
 
+#include <memory>
 #include <string>
+#include <vector>
 #include "IAccount.h"
 
 class IAccountFactory {
@@ -10,4 +12,4 @@ class IAccountFactory {
   virtual std::vector<std::string> getAccountNames() = 0;
 };
 
-#endif  // INCLUDE GUARD
+#endif  // BANKINGAPPLICATION_IACCOUNTFACTORY_H_

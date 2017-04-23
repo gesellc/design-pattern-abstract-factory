@@ -1,5 +1,5 @@
-#ifndef IACCOUNT_H
-#define IACCOUNT_H
+#ifndef BANKINGAPPLICATION_IACCOUNT_H_
+#define BANKINGAPPLICATION_IACCOUNT_H_
 
 #include <string>
 
@@ -8,4 +8,4 @@ class IAccount {
   virtual std::string advertise() = 0;
 };
 
-#endif  // IACCOUNT_H
+#endif  // BANKINGAPPLICATION_IACCOUNT_H_

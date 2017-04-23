@@ -107,7 +107,7 @@ install:
 
 script:
   - cd $TRAVIS_BUILD_DIR
-  - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp)
+  - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp) 2>&1 | grep -vE ^Ignoring
 #  - clang-format -style=google -sort-includes -i || git status
   - mkdir cmake-build
   - cd cmake-build

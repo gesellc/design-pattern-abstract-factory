@@ -9,6 +9,8 @@ add_executable(application_run ${SOURCE_FILES})
 include_directories(
         bankingApplication
         bankingAccounts
+        . # to be able to make google style includes
+        # bankingAccounts/AccountFactoryImpl.cpp should include its header file bankingAccounts/AccountFactoryImpl.h  [build/include] [5]
 )
 
 add_subdirectory(bankingApplication)

@@ -1,7 +1,8 @@
-#include "BankApplication.h"
+#include "bankingApplication/BankApplication.h"
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::endl;
 
 BankApplication::BankApplication(IAccountFactory* accountFactory)
     : accountFactory(accountFactory) {}
