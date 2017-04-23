@@ -20,6 +20,6 @@ void BankApplication::run() {
     cout << endl;
 
     cout << "Available account types:" << endl;
-    for( const auto name : accountFactory->getAccountNames())
+    for (const auto name : accountFactory->getAccountNames())
         cout << "- " << name << endl;
 }
