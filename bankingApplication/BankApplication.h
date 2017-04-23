@@ -1,19 +1,19 @@
 #ifndef BANKAPPLICATION_H
 #define BANKAPPLICATION_H
 
-#include "IAccountFactory.h"
-#include "IAccount.h"
 #include <vector>
+#include "IAccount.h"
+#include "IAccountFactory.h"
 
 class BankApplication {
-public:
-    BankApplication(IAccountFactory *accountFactory);
+ public:
+  BankApplication(IAccountFactory* accountFactory);
 
-    void run();
+  void run();
 
-private:
-    IAccountFactory* accountFactory;
-    std::vector<std::shared_ptr<IAccount>> accounts;
+ private:
+  IAccountFactory* accountFactory;
+  std::vector<std::shared_ptr<IAccount>> accounts;
 };
 
-#endif //BANKAPPLICATION_H
+#endif  // BANKAPPLICATION_H

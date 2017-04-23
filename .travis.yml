@@ -114,3 +114,4 @@ script:
   - ./application_test/run_bankingApplication_tests
   - cd $TRAVIS_BUILD_DIR
   - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp | grep -vE "^\.\/application_test\/lib\/")
+#  - clang-format -style=google -sort-includes -i

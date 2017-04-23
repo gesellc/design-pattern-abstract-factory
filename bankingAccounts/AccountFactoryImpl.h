@@ -1,23 +1,23 @@
 #ifndef ACCOUNTFACTORYIMPL_H
 #define ACCOUNTFACTORYIMPL_H
 
-
-#include <vector>
 #include <functional>
 #include <unordered_map>
-#include "IAccountFactory.h"
+#include <vector>
 #include "IAccount.h"
+#include "IAccountFactory.h"
 
 class AccountFactoryImpl : public IAccountFactory {
-public:
-    AccountFactoryImpl();
+ public:
+  AccountFactoryImpl();
 
-    std::shared_ptr<IAccount> make(std::string accountType) override;
+  std::shared_ptr<IAccount> make(std::string accountType) override;
 
-    std::vector<std::string> getAccountNames() override;
+  std::vector<std::string> getAccountNames() override;
 
-private:
-    std::unordered_map<std::string, std::function<std::shared_ptr<IAccount>()>> makeMap;
+ private:
+  std::unordered_map<std::string, std::function<std::shared_ptr<IAccount>()>>
+      makeMap;
 };
 
-#endif //ACCOUNTFACTORYIMPL_H
+#endif  // ACCOUNTFACTORYIMPL_H

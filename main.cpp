@@ -1,15 +1,13 @@
-#include "bankingApplication/IAccountFactory.h"
-#include "bankingApplication/BankApplication.h"
 #include "bankingAccounts/AccountFactoryImpl.h"
+#include "bankingApplication/BankApplication.h"
+#include "bankingApplication/IAccountFactory.h"
 
 using namespace std;
 
 int main() {
+  IAccountFactory* accountFactory = new AccountFactoryImpl();
+  BankApplication* bank = new BankApplication(accountFactory);
 
-    IAccountFactory * accountFactory = new AccountFactoryImpl();
-    BankApplication * bank = new BankApplication(accountFactory);
-
-    bank->run();
-    return 0;
+  bank->run();
+  return 0;
 }
-

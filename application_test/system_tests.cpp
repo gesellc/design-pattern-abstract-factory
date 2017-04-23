@@ -1,13 +1,13 @@
 #include "gtest/gtest.h"
 
-#include "BankApplication.h"
 #include "AccountFactoryImpl.h"
+#include "BankApplication.h"
 
 using namespace std;
 
 TEST(systemTest, runTheWholeThing) {
-    IAccountFactory * accountFactory = new AccountFactoryImpl();
-    BankApplication * bank = new BankApplication(accountFactory);
+  IAccountFactory* accountFactory = new AccountFactoryImpl();
+  BankApplication* bank = new BankApplication(accountFactory);
 
-    bank->run();
+  bank->run();
 }
