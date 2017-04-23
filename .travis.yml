@@ -114,11 +114,11 @@ script:
   - ./application_test/run_bankingApplication_tests
 #  - cd $TRAVIS_BUILD_DIR
 #  - cd application_test
-#  - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp)
+#  - ../cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp)
   - cd $TRAVIS_BUILD_DIR
   - cd bankingAccounts
-  - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp)
+  - ../cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp)
   - cd $TRAVIS_BUILD_DIR
   - cd bankingApplication
-  - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp)
+  - ../cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp)
 #  - clang-format -style=google -sort-includes -i
