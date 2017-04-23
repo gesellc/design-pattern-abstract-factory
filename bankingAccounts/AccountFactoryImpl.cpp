@@ -5,7 +5,7 @@
 #include "CrazyAccount.h"
 #include "WellnessAccount.h"
 
-std::shared_ptr<IAccount> AccountFactoryImpl::sharedMake(std::string accountType) {
+std::shared_ptr<IAccount> AccountFactoryImpl::make(std::string accountType) {
     std::shared_ptr<IAccount> ptr(makeMap[accountType]());
     return ptr;
 }

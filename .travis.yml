@@ -2,7 +2,7 @@
 # Cobbled together from:
 #   https://github.com/boostorg/hana/blob/master/.travis.yml
 #
-# Decent Travis CI C++ support is requested:
+# Decent Travis CI C++ support is discussed here:
 #   https://github.com/travis-ci/travis-ci/issues/6300
 #
 

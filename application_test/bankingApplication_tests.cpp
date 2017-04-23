@@ -18,7 +18,7 @@ class MockAccountFactoryImpl : public IAccountFactory {
 public:
     std::vector<std::shared_ptr<MockAccount>> sharedAccounts;
 
-    std::shared_ptr<IAccount> sharedMake(std::string accountType) override {
+    std::shared_ptr<IAccount> make(std::string accountType) override {
         MockAccount * newAccount = new MockAccount();
         std::shared_ptr<MockAccount> ptr(newAccount);
         sharedAccounts.push_back(ptr);
