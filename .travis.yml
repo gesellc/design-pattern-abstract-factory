@@ -106,6 +106,7 @@ install:
 
 
 script:
+  - tree
   - pwd
   - cd ..
   - pwd
