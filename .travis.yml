@@ -108,7 +108,7 @@ install:
 script:
   - cd $TRAVIS_BUILD_DIR
   - ls -la
-  - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp | grep -vE "^\.\/dep\/" ) 2>&1 | grep -vE ^Ignoring
+  - ./cpplint.py --counting=detailed $( find . -name \*.h -or -name \*.cpp | grep -vE "^\.\/deps\/" ) 2>&1 | grep -vE ^Ignoring
 #  - clang-format -style=google -sort-includes -i || git status
   - mkdir cmake-build
   - cd cmake-build
