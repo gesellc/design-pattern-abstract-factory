@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.1)
 project(BankApplicationProject)
 
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/conanbuildinfo.cmake) #Clion, with conanbuildinfo.cmake in build folder
-    include(${CMAKE_CURRENT_SOURCE_DIR}/cmake-build-debug/conanbuildinfo.cmake)
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/conanbuildinfo.cmake) #Clion, with conanbuildinfo.cmake in build folder
+    include(${CMAKE_CURRENT_SOURCE_DIR}/conanbuildinfo.cmake)
 else()
     include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake) # Not CLion
 endif()
