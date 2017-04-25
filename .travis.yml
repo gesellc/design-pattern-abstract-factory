@@ -49,7 +49,7 @@ matrix:
 
 install:
   # Download conan
-  - pip install --upgrade conan
+  - sudo pip install --upgrade conan
   # Automatic detection of your arch, compiler, etc
   - conan user
 
