@@ -7,11 +7,11 @@
 #
 
 os: linux
-sudo: required
-language: python
-
-#language: c++
 #sudo: required
+#language: python
+
+language: c++
+sudo: required
 
 addons:
   apt:
@@ -52,11 +52,6 @@ matrix:
 
 
 install:
-  # Download conan
-  - sudo pip install --upgrade conan
-  # Automatic detection of your arch, compiler, etc
-  - conan user
-
   ############################################################################
   # All the dependencies are installed in ${TRAVIS_BUILD_DIR}/deps/
   ############################################################################
