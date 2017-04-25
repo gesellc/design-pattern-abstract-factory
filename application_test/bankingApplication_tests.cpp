@@ -3,6 +3,7 @@
 #include <vector>
 #include "BankApplication.h"
 #include "gtest/gtest.h"
+#include "gmock/gmock.h"
 
 using std::vector;
 using std::string;
