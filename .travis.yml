@@ -49,6 +49,7 @@ matrix:
 
 install:
 
+  - pip install -U pip wheel
   # Install conan
   - pip install conan
   # Automatic detection of your arch, compiler, etc.
