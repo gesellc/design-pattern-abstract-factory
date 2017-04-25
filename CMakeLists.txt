@@ -8,6 +8,7 @@ else()
 endif()
 
 conan_basic_setup()
+set(CMAKE_SKIP_RPATH OFF)
 
 add_definitions(-std=c++11)
 
