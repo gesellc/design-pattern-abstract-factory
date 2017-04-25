@@ -1,0 +1,13 @@
+[requires]
+gtest/1.7.0@lasote/stable
+googlemock/1.7.0@azriel91/stable-1
+
+[options]
+gtest:shared=True
+
+[generators]
+cmake
+
+[imports]
+bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my "bin" folder
+lib, *.dylib* -> ./bin # Copies all dylib files from packages lib folder to my "bin" folder
