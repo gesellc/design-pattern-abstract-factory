@@ -6,8 +6,12 @@
 #   https://github.com/travis-ci/travis-ci/issues/6300
 #
 
-language: c++
+os: linux
 sudo: required
+language: python
+
+#language: c++
+#sudo: required
 
 addons:
   apt:
