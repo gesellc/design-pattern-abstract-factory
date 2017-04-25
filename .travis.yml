@@ -7,7 +7,7 @@
 #
 
 language: c++
-sudo: false
+sudo: required
 
 addons:
   apt:
@@ -48,11 +48,9 @@ matrix:
 
 
 install:
-
-  - pip install --upgrade pip
-  # Install conan
-  - pip install conan
-  # Automatic detection of your arch, compiler, etc.
+  # Download conan
+  - sudo pip install --upgrade conan
+  # Automatic detection of your arch, compiler, etc
   - conan user
 
   ############################################################################
