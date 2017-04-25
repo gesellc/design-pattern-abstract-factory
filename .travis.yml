@@ -48,6 +48,12 @@ matrix:
 
 
 install:
+
+  # Install conan
+  - pip install conan
+  # Automatic detection of your arch, compiler, etc.
+  - conan user
+
   ############################################################################
   # All the dependencies are installed in ${TRAVIS_BUILD_DIR}/deps/
   ############################################################################
@@ -112,6 +118,7 @@ script:
 #  - clang-format -style=google -sort-includes -i || git status
   - mkdir cmake-build
   - cd cmake-build
+  - conan install .. --build googletest --build gtest --build googlemock
   - cmake ..
   - cmake --build . --target run_bankingApplication_tests
   - ./application_test/run_bankingApplication_tests
