@@ -70,7 +70,7 @@ TEST(bankingApplicationTest, advertisesTwoAccounts) {
           .WillOnce(Return("mock advertisement 1"));
 
   EXPECT_CALL(*ptrMA1, advertise())
-          .Times(1)  // TODO(gesellc): THIS SHOULD FAIL !!
+          .Times(3)  // TODO(gesellc): this should fail, the app only calls once.
           .WillOnce(Return("mock advertisement 2.1"))
           .WillOnce(Return("mock advertisement 2.2"));
 
