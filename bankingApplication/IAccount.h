@@ -5,6 +5,7 @@
 
 class IAccount {
  public:
+  virtual ~IAccount() {}
   virtual std::string advertise() = 0;
 };
 

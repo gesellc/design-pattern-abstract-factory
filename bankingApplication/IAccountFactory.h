@@ -8,6 +8,7 @@
 
 class IAccountFactory {
  public:
+  virtual ~IAccountFactory() {}
   virtual std::shared_ptr<IAccount> make(std::string accountType) = 0;
   virtual std::vector<std::string> getAccountNames() = 0;
 };
